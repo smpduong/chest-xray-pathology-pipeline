@@ -1,0 +1,29 @@
+# Outputs
+output/
+*.png
+*.jpg
+*.jpeg
+*.log
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+~/.torchxrayvision/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
