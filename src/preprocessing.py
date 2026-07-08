@@ -1,5 +1,7 @@
 """Radiological preprocessing for XRV-compatible inputs."""
 
+from typing import Union
+
 import numpy as np
 import torch
 import torchvision.transforms as transforms
@@ -16,7 +18,7 @@ def build_transforms() -> transforms.Compose:
     ])
 
 
-def preprocess(image: Image.Image, device: str) -> torch.Tensor:
+def preprocess(image: Image.Image, device: Union[str, torch.device]) -> torch.Tensor:
     """Convert PIL grayscale to XRV tensor: (1, 1, 224, 224)."""
     img_np = np.array(image)  # (H, W), uint8
     img_np = xrv.datasets.normalize(img_np, 255)  # [-1024, 1024]
