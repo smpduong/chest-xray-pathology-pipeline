@@ -176,3 +176,14 @@ class ChestXrayPipeline:
 
         self.logger.info("Pipeline completed successfully.")
         self.logger.info("Output directory: %s", self.cfg.output_dir.resolve())
+
+
+def main() -> None:
+    """Entry point for `python -m src.pipeline`."""
+    config = DemoConfig()
+    pipeline = ChestXrayPipeline(config)
+    pipeline.run()
+
+
+if __name__ == "__main__":
+    main()

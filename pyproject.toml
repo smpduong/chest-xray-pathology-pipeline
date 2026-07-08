@@ -1,0 +1,11 @@
+[tool.mypy]
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = [
+    "torchvision",
+    "torchvision.*",
+    "torchxrayvision",
+    "torchxrayvision.*",
+]
+ignore_missing_imports = true
